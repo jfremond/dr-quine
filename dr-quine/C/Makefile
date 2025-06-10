@@ -6,15 +6,16 @@
 #    By: jfremond <jfremond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/10 09:53:01 by jfremond          #+#    #+#              #
-#    Updated: 2025/06/10 10:07:49 by jfremond         ###   ########.fr        #
+#    Updated: 2025/06/10 13:18:29 by jfremond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-##################
-#   EXECUTABLE   #
-##################
+###################
+#   EXECUTABLES   #
+###################
 
-NAME	=	Colleen
+COLLEEN	=	Colleen
+GRACE	=	Grace
 
 ################
 #   COMMANDS   #
@@ -42,30 +43,35 @@ OBJS_D	=	objs/
 #   SOURCES   #
 ###############
 
-SRCS	=	colleen.c
+SRCS_C	=	colleen.c
+SRCS_G	=	grace.c
 
 ###############
 #   OBJECTS   #
 ###############
 
-OBJS	=		$(SRCS:%.c=$(OBJS_D)%.o)
+OBJS_C = $(SRCS_C:%.c=$(OBJS_D)%.o)
+OBJS_G = $(SRCS_G:%.c=$(OBJS_D)%.o)
 
 ####################
 #   DEPENDENCIES   #
 ####################
 
-DEPS	=		$(OBJS:.o=.d)
+DEPS_C = $(OBJS_C:.o=.d)
+DEPS_G = $(OBJS_G:.o=.d)
 
 #############
 #   RULES   #
 #############
 
-all:			$(NAME)
+all:			$(COLLEEN) $(GRACE)
 
-$(NAME):		$(OBJS)
-				$(CC) $(OBJS) -o $(NAME)
+$(COLLEEN):		$(OBJS_C)
+				$(LINK) $(OBJS_C) -o $@
 
--include		$(DEPS)
+$(GRACE):		$(OBJS_G)
+				$(LINK) $(OBJS_G) -o $@
+
 
 $(OBJS_D)%.o:%.c
 				$(MKDIR) $(@D)
@@ -75,8 +81,10 @@ clean:
 				$(RM) $(OBJS_D)
 
 fclean:			clean
-				$(RM) $(NAME)
+				$(RM) $(COLLEEN) $(GRACE)
 
 re:				fclean all
 
 .PHONY:			all clean fclean re
+
+-include		$(DEPS_C) $(DEPS_G)
