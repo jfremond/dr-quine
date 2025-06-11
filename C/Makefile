@@ -43,8 +43,8 @@ OBJS_D	=	objs/
 #   SOURCES   #
 ###############
 
-SRCS_C	=	colleen.c
-SRCS_G	=	grace.c
+SRCS_C	=	Colleen.c
+SRCS_G	=	Grace.c
 
 ###############
 #   OBJECTS   #
