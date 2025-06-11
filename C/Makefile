@@ -79,6 +79,7 @@ $(OBJS_D)%.o:%.c
 
 clean:
 				$(RM) $(OBJS_D)
+				$(RM) Grace_kid.c
 
 fclean:			clean
 				$(RM) $(COLLEEN) $(GRACE)
