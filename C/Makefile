@@ -16,6 +16,7 @@
 
 COLLEEN	=	Colleen
 GRACE	=	Grace
+SULLY	=	Sully
 
 ################
 #   COMMANDS   #
@@ -45,6 +46,7 @@ OBJS_D	=	objs/
 
 SRCS_C	=	Colleen.c
 SRCS_G	=	Grace.c
+SRCS_S	=	Sully.c
 
 ###############
 #   OBJECTS   #
@@ -52,6 +54,7 @@ SRCS_G	=	Grace.c
 
 OBJS_C = $(SRCS_C:%.c=$(OBJS_D)%.o)
 OBJS_G = $(SRCS_G:%.c=$(OBJS_D)%.o)
+OBJS_S = $(SRCS_S:%.c=$(OBJS_D)%.o)
 
 ####################
 #   DEPENDENCIES   #
@@ -59,12 +62,13 @@ OBJS_G = $(SRCS_G:%.c=$(OBJS_D)%.o)
 
 DEPS_C = $(OBJS_C:.o=.d)
 DEPS_G = $(OBJS_G:.o=.d)
+DEPS_S = $(OBJS_S:.o=.d)
 
 #############
 #   RULES   #
 #############
 
-all:			$(COLLEEN) $(GRACE)
+all:			$(COLLEEN) $(GRACE) $(SULLY)
 
 $(COLLEEN):		$(OBJS_C)
 				$(LINK) $(OBJS_C) -o $@
@@ -72,6 +76,8 @@ $(COLLEEN):		$(OBJS_C)
 $(GRACE):		$(OBJS_G)
 				$(LINK) $(OBJS_G) -o $@
 
+$(SULLY):		$(OBJS_S)
+				$(LINK) $(OBJS_S) -o $@
 
 $(OBJS_D)%.o:%.c
 				$(MKDIR) $(@D)
@@ -82,10 +88,10 @@ clean:
 				$(RM) Grace_kid.c
 
 fclean:			clean
-				$(RM) $(COLLEEN) $(GRACE)
+				$(RM) $(COLLEEN) $(GRACE) $(SULLY)
 
 re:				fclean all
 
 .PHONY:			all clean fclean re
 
--include		$(DEPS_C) $(DEPS_G)
+-include		$(DEPS_C) $(DEPS_G) $(DEPS_S)
