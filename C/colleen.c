@@ -1,8 +1,8 @@
 #include <stdio.h>
 void	print()
 {
-	char *s = "#include <stdio.h>%cvoid	print()%c{%c	char *s = %c%s%c;%c	printf(s, 10, 10, 10, 34, s, 34, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10);%c}%c/*%c	comment outside of main%c*/%cint	main()%c{%c	/*%c		comment in main%c	*/%c	print();%c}%c";
-	printf(s, 10, 10, 10, 34, s, 34, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10);
+	char *s = "#include <stdio.h>%1$cvoid	print()%1$c{%1$c	char *s = %2$c%3$s%2$c;%1$c	printf(s, 10, 34, s);%1$c}%1$c/*%1$c	comment outside of main%1$c*/%1$cint	main()%1$c{%1$c	/*%1$c		comment in main%1$c	*/%1$c	print();%1$c}%1$c";
+	printf(s, 10, 34, s);
 }
 /*
 	comment outside of main
