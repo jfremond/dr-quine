@@ -85,7 +85,7 @@ $(OBJS_D)%.o:%.c
 
 clean:
 				$(RM) $(OBJS_D)
-				$(RM) Grace_kid.c
+				$(RM) Grace_kid.c Sully_*.c Sully_*
 
 fclean:			clean
 				$(RM) $(COLLEEN) $(GRACE) $(SULLY)
