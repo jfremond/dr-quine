@@ -6,7 +6,7 @@
 #    By: jfremond <jfremond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/10 09:53:01 by jfremond          #+#    #+#              #
-#    Updated: 2025/06/12 16:09:17 by jfremond         ###   ########.fr        #
+#    Updated: 2025/06/15 00:08:32 by jfremond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SULLY	=	Sully
 ################
 
 ASM		=		nasm
-LINK	=		clang
+LINK	=		gcc
 MKDIR	=		/bin/mkdir -p
 RM		=		/bin/rm -rf
 

@@ -10,7 +10,7 @@ section	.text
 		mov	rsi, s
 		mov	rdx, 10
 		mov	rcx, 34
-		call	printf
+		call	printf wrt ..plt
 		pop	rbp
 		ret
 	main:
