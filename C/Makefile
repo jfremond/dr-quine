@@ -6,7 +6,7 @@
 #    By: jfremond <jfremond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/10 09:53:01 by jfremond          #+#    #+#              #
-#    Updated: 2025/06/10 13:18:29 by jfremond         ###   ########.fr        #
+#    Updated: 2025/06/15 01:19:25 by jfremond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,8 @@ SULLY	=	Sully
 #   COMMANDS   #
 ################
 
-CC		=		clang
-LINK	=		clang
+CC		=		gcc
+LINK	=		gcc
 MKDIR	=		/bin/mkdir -p
 RM		=		/bin/rm -rf
 
