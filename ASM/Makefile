@@ -32,6 +32,7 @@ RM		=		/bin/rm -rf
 #############
 
 ASMFLAGS	=	-f elf64 -g -gdwarf
+CFLAGS		=	-Wall -Wextra -Werror
 
 ###################
 #   DIRECTORIES   #
@@ -70,13 +71,13 @@ DEPS_S = $(OBJS_S:.o=.d)
 all:			$(COLLEEN) $(GRACE) $(SULLY)
 
 $(COLLEEN):		$(OBJS_C)
-				$(LINK) $(OBJS_C) -o $@
+				$(LINK) $(CFLAGS) $(OBJS_C) -o $@
 
 $(GRACE):		$(OBJS_G)
-				$(LINK) $(OBJS_G) -o $@
+				$(LINK) $(CFLAGS) $(OBJS_G) -o $@
 
 $(SULLY):		$(OBJS_S)
-				$(LINK) $(OBJS_S) -o $@
+				$(LINK) $(CFLAGS) $(OBJS_S) -o $@
 
 $(OBJS_D)%.o:%.s
 				$(MKDIR) $(@D)
