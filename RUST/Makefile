@@ -6,7 +6,7 @@
 #    By: jfremond <jfremond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/23 18:46:45 by jfremond          #+#    #+#              #
-#    Updated: 2025/07/11 12:01:36 by jfremond         ###   ########.fr        #
+#    Updated: 2025/07/11 18:54:48 by jfremond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ $(COLLEEN):		$(SRCS_C)
 $(GRACE):		$(SRCS_G)
 				$(CC) $(SRCS_G)
 
-$(SULLY):		$(SRCS_C)
+$(SULLY):		$(SRCS_S)
 				$(CC) $(SRCS_S)
 
 clean:
