@@ -6,7 +6,7 @@
 #    By: jfremond <jfremond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/23 18:46:45 by jfremond          #+#    #+#              #
-#    Updated: 2025/06/23 19:14:07 by jfremond         ###   ########.fr        #
+#    Updated: 2025/07/11 12:01:36 by jfremond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ $(SULLY):		$(SRCS_C)
 				$(CC) $(SRCS_S)
 
 clean:
-				$(RM) Grace_kid.c  Sully_*
+				$(RM) Grace_kid.rs  Sully_*
 
 fclean:			clean
 				$(RM) $(COLLEEN) $(GRACE) $(SULLY)
